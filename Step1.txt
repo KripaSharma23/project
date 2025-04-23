@@ -1,0 +1,31 @@
+1)
+Environment Creation :
+-----------create folder on desktop
+-----------copy folder path
+-----------run in anaconda prompt
+anaconda prompt -------terminal 
+-----------cd folder_path
+-----------code .
+vs code will open with that particular folder
+________________________________________
+Environment Creation :
+-------------open vscode terminal 
+-------------conda create -p myenv python==3.12
+------------if error encountered 
+-------------conda config --set ssl_verify false
+-------------conda create -p myenv python==3.12
+-------------conda activate myenv
+
+Information:
+
+ -n -------------------conda flags---------------name-----------name the environment(recommended for general use)
+-p---------------------conda flags---------------prefix/path------create env at specifc folder (generally use for project-local envs)
+
+
+____________________________________________
+
+2) link up to GitHub :
+Follow the GitRepository steps 
+____________________________________________
+3) .gitignore
+-----programmin lang---python
