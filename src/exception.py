@@ -1,5 +1,7 @@
-import sys 
+
 from src.logger import logging
+
+import sys
 #function for customizing the error for errors
 def error_message_detail(error,error_detail:sys):
     #error_detail-----gives exact information of error
@@ -11,7 +13,7 @@ def error_message_detail(error,error_detail:sys):
 # Inheritence
 class CustomException:
     def __init__(self,error_msg,error_detail:sys):
-        super.__init__(error_msg)
+        super().__init__(error_msg)
         self.error_msg=error_message_detail(error_msg,error_detail=error_detail)
 
     def __str__(self):
@@ -22,6 +24,6 @@ if __name__=="__main__":
     try:
         a=1/0
     except Exception as e:
-        logging.info("logging has started")
+        logging.info(" Dvision of zero error")
         raise CustomException(e,sys)
         
