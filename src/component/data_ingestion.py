@@ -20,8 +20,12 @@ import sys
 from src.exception import CustomException
 from src.logger import logging
 from dataclasses import dataclass
+
 from src.component.data_transformation import DataTransformationConfig 
 from src.component.data_transformation import DataTransformation
+
+from src.component.model_trainer import ModelTrainerConfig
+from src.component.model_trainer import ModelTrainer
 
 import pandas as pd
 
@@ -73,6 +77,14 @@ class DataIngestion:
 if __name__=='__main__':
     obj=DataIngestion()
     train_data,test_data=obj.Initiate_data_ingestion()
+
     data_transformation=DataTransformation()
-    data_transformation.initiate_data_transformation(train_data,test_data)
+    #data_transformation.initiate_data_transformation(train_data,test_data) 
+    #this can be commented out when running only for datatransformation 
+    train_arr,test_arr,_ =data_transformation.initiate_data_transformation(train_data,test_data) 
+    #retrun type of data transformation is train_arr,test_arr and pickle file
+    #from data transform we will give train_arr and test_arr to forward steps i.e model_trainer
+    model_trainer=ModelTrainer()
+    print(model_trainer.initiate_model_trainer(train_arr,test_arr))#will return r2 score
+
 
