@@ -81,7 +81,7 @@ if __name__=='__main__':
     data_transformation=DataTransformation()
     #data_transformation.initiate_data_transformation(train_data,test_data) 
     #this can be commented out when running only for datatransformation 
-    train_arr,test_arr,_ =data_transformation.initiate_data_transformation(train_data,test_data) 
+    train_arr,test_arr,_=data_transformation.initiate_data_transformation(train_data,test_data) 
     #retrun type of data transformation is train_arr,test_arr and pickle file
     #from data transform we will give train_arr and test_arr to forward steps i.e model_trainer
     model_trainer=ModelTrainer()
