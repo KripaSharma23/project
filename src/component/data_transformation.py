@@ -42,8 +42,8 @@ class DataTransformation:
 
         try:
             #numerical feautures and categorigal feautures
-            num_column=['reading score', 'writing score']
-            cat_column=['gender', 'race/ethnicity', 'parental level of education', 'lunch', 'test preparation course']
+            num_column=['reading_score', 'writing_score']
+            cat_column=['gender', 'race_ethnicity', 'parental_level_of_education', 'lunch', 'test_preparation_course']
             num_pipeline=Pipeline(
                 steps=[
                     ("imputer",SimpleImputer(strategy="median")),#median ---becoz outliers are present as we seen in eda
@@ -84,8 +84,8 @@ class DataTransformation:
             #above preprocessor object we created where encoding and standardscaling is getting initialized now we will use them in our train data and test data
             #make sure this needs to be converted in a pickle file
             preprocesser_obj=self.get_datatransformer_obj()
-            target_column_name="math score"
-            num_columns=['reading score', 'writing score']
+            target_column_name="math_score"
+            num_columns=['reading_score', 'writing_score']
             input_column_train_df=train_df.drop(columns=[target_column_name],axis=1)#x_train
             input_column_test_df=test_df.drop(columns=[target_column_name],axis=1)#x_test
             target_column_train_df=train_df[target_column_name]#y_train
