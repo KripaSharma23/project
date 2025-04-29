@@ -19,6 +19,7 @@
                 </option>
             </select>
         </div>
+        <br>
         <div class="mb-3">
             <label class="form-label">Race or Ethnicity</label>
             <select class="form-control" name="race_ethnicity" placeholder="Enter you ethnicity" required>
@@ -40,6 +41,7 @@
                 </option>
             </select>
         </div>
+        <br>
         <div class="mb-3">
             <label class="form-label">Parental Level of Education</label>
             <select class="form-control" name="parental_level_of_education"
@@ -65,6 +67,7 @@
                 </option>
             </select>
         </div>
+        <br>
         <div class="mb-3">
             <label class="form-label">Lunch Type</label>
             <select class="form-control" name="lunch" placeholder="Enter you Lunch" required>
@@ -77,6 +80,7 @@
                 </option>
             </select>
         </div>
+        <br>
         <div class="mb-3">
             <label class="form-label">Test preparation Course</label>
             <select class="form-control" name="test_preparation_course" placeholder="Enter you Course"
@@ -90,22 +94,26 @@
                 </option>
             </select>
         </div>
+        <br>
         <div class="mb-3">
             <label class="form-label">Writing Score out of 100</label>
             <input class="form-control" type="number" name="reading_score"
                 placeholder="Enter your Reading score" min='0' max='100' />
         </div>
+        <br>
         <div class="mb-3">
             <label class="form-label">Reading Score out of 100</label>
             <input class="form-control" type="number" name="writing_score"
                 placeholder="Enter your Reading Score" min='0' max='100' />
         </div>
+        <br>
         <div class="mb-3">
             <input class="btn btn-primary" type="submit" value="Predict your Maths Score" required />
         </div>
+        <br>
     
     <h2>
-       THE  prediction is {{final}}
+       The  prediction is {{final}}
     </h2>
     </form>
    <body>
