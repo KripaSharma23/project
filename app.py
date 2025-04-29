@@ -7,8 +7,9 @@ from sklearn.preprocessing import StandardScaler
 from src.pipeline.predict_pipeline import CustomData,PredictPipeline
 
 
-app=Flask(__name__)
-
+application=Flask(__name__)
+app=application
+# we are writng the application because for aws depolyment we have to give application name compulsory in the new file 
 #route forHomepage
 @app.route("/")
 def index():
