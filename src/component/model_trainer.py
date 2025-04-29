@@ -41,7 +41,7 @@ class ModelTrainer:
             #lets create a dictionary of models 
             #copying from model trainer
             models={
-                "LinearRegression":LinearRegression(),
+                
                 "Ridge":Ridge(),
                 "lasso":Lasso(),
                 "knn":KNeighborsRegressor(),
@@ -74,7 +74,12 @@ class ModelTrainer:
                     # 'max_features':['auto','sqrt','log2'],
                     'n_estimators': [8,16,32,64,128,256]
                 },
-                "LinearRegression":{},
+                
+                "Ridge":{
+                    'alpha': [0.001, 0.1, 1, 10, 100],
+                    'fit_intercept': [True, False],
+                    'solver': ['auto', 'svd', 'cholesky', 'lsqr', 'saga']
+                },
                 
                 "CatBoosting Regressor":{
                     'depth': [6,8,10],
